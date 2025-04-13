@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muawiyah Islamic Lectures & Quranic Teaching</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Lateef:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0a5c36;
+            --secondary-color: #f0e6d2;
+            --gold-color: #d4af37;
+            --text-color: #333;
+            --light-bg: #f9f5e9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lateef', serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.8;
+            font-size: 20px;
+            background-image: url('https://images.unsplash.com/photo-1566669437689-9e5d1448a1db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-color: rgba(249, 245, 233, 0.9);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid var(--gold-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-family: 'Amiri', serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .logo span {
+            color: var(--gold-color);
+        }
+        
+        .slogan {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: rgba(10, 92, 54, 0.9);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav ul li a:hover {
+            background-color: var(--gold-color);
+            color: var(--primary-color);
+        }
+        
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1542816417-0983670d25b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-family: 'Amiri', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--gold-color);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--gold-color);
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--gold-color);
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: var(--gold-color);
+        }
+        
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-family: 'Amiri', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background-color: var(--gold-color);
+            margin: 15px auto;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+            border-top: 5px solid var(--primary-color);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card-title {
+            font-family: 'Amiri', serif;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .quran-verse {
+            font-family: 'Amiri', serif;
+            font-size: 1.8rem;
+            text-align: right;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            line-height: 2.5;
+        }
+        
+        .verse-translation {
+            font-style: italic;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 3px solid var(--gold-color);
+        }
+        
+        .verse-explanation {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .hadith {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .hadith::before {
+            content: '"';
+            font-family: 'Amiri', serif;
+            font-size: 5rem;
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            color: var(--primary-color);
+            opacity: 0.2;
+        }
+        
+        .hadith-source {
+            text-align: left;
+            font-style: italic;
+            color: var(--primary-color);
+        }
+        
+        .prayer-times {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .prayer-time {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--primary-color);
+        }
+        
+        .prayer-time:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .prayer-name {
+            font-family: 'Amiri', serif;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .prayer-hour {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--gold-color);
+        }
+        
+        .kids-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .kids-content {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+        
+        .kids-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: right;
+        }
+        
+        .kids-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .kids-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--gold-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-family: 'Amiri', serif;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-section h3 {
+            font-family: 'Amiri', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--gold-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold-color);
+            padding-right: 5px;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--gold-color);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+            }
+            
+            .kids-content {
+                flex-direction: column;
+            }
+            
+            .kids-text {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Muawiyah <span>Islamic</span></div>
+            <div class="slogan">Quranic Teachings & Authentic Hadith</div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#quran">Quran</a></li>
+                <li><a href="#hadith">Hadith</a></li>
+                <li><a href="#prayer">Prayer Times</a></li>
+                <li><a href="#kids">Kids Quran</a></li>
+                <li><a href="#lectures">Lectures</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Seek Knowledge in Islam</h1>
+            <p>Learn Quran, Understand Hadith, and Follow the Sunnah of Prophet Muhammad (PBUH)</p>
+            <a href="#lectures" class="btn">Join Our Classes</a>
+        </div>
+    </section>
+    
+    <section class="section" id="quran">
+        <div class="container">
+            <h2 class="section-title">Daily Quranic Verse</h2>
+            <div class="card">
+                <h3 class="card-title">Surah Al-Baqarah (2:286)</h3>
+                <div class="quran-verse">لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا</div>
+                <div class="verse-translation">"Allah does not burden a soul beyond that it can bear..."</div>
+                <div class="verse-explanation">
+                    <p>This blessed verse reminds us that Allah (SWT) knows our limits and never tests us beyond our capacity. Every hardship comes with ease, and patience during trials leads to great rewards. This is a promise from Allah that with every difficulty comes relief, and we should always turn to Him in prayer and supplication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="hadith">
+        <div class="container">
+            <h2 class="section-title">Hadith of the Day</h2>
+            <div class="card">
+                <div class="hadith">
+                    <p>The strong believer is better and more beloved to Allah than the weak believer, while there is good in both.</p>
+                    <p class="hadith-source">- Sahih Muslim 2664</p>
+                </div>
+                <div class="verse-explanation">
+                    <p>This hadith teaches us that true strength lies in faith, good character, and reliance on Allah. The "strong believer" refers to one who is strong in faith, knowledge, and righteous actions. We should strive to improve ourselves in both religious and worldly matters while maintaining complete trust in Allah's plan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="prayer">
+        <div class="container">
+            <h2 class="section-title">Prayer Times</h2>
+            <div class="card">
+                <h3 class="card-title">Today's Prayer Times</h3>
+                <p style="text-align: center; margin-bottom: 20px;">📍 <strong>Location:</strong> KAMPALA, UGANDA</p>
+                
+                <div class="prayer-times">
+                    <div class="prayer-time">
+                        <div class="prayer-name">Fajr</div>
+                        <div class="prayer-hour">6:00 AM</div>
+                    </div>
+                    <div class="prayer-time">
+                        <div class="prayer-name">Dhuhr</div>
+                        <div class="prayer-hour">1:10 PM</div>
+                    </div>
+                    <div class="prayer-time">
+                        <div class="prayer-name">Asr</div>
+                        <div class="prayer-hour">4:00 PM</div>
+                    </div>
+                    <div class="prayer-time">
+                        <div class="prayer-name">Maghrib</div>
+                        <div class="prayer-hour">7:00 PM</div>
+                    </div>
+                    <div class="prayer-time">
+                        <div class="prayer-name">Isha</div>
+                        <div class="prayer-hour">8:00 PM</div>
+                    </div>
+                </div>
+                
+                <p style="text-align: center; margin-top: 20px; font-style: italic;">*Times are updated daily based on your location</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="kids-section" id="kids">
+        <div class="container">
+            <div class="kids-content">
+                <div class="kids-text">
+                    <h2 style="font-family: 'Amiri', serif; font-size: 2.5rem; margin-bottom: 20px;">Quran Classes for Kids</h2>
+                    <p style="font-size: 1.3rem; margin-bottom: 20px;">We offer comprehensive Quran education for children with qualified teachers who specialize in teaching young Muslims.</p>
+                    
+                    <div style="text-align: right;">
+                        <div style="margin-bottom: 15px;">
+                            <i class="fas fa-check" style="color: var(--gold-color); margin-left: 10px;"></i>
+                            <span>Interactive Quran Memorization (Hifz)</span>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <i class="fas fa-check" style="color: var(--gold-color); margin-left: 10px;"></i>
+                            <span>Tajweed & Proper Recitation</span>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <i class="fas fa-check" style="color: var(--gold-color); margin-left: 10px;"></i>
+                            <span>Islamic Manners & Stories</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn" style="margin-top: 20px; display: inline-block;">Enroll Your Child</a>
+                </div>
+                
+                <div class="kids-image">
+                    <img src="https://images.unsplash.com/photo-1566669437684-186c9b470599?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Kids learning Quran">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="lectures">
+        <div class="container">
+            <h2 class="section-title">Weekly Islamic Lectures</h2>
+            <div class="card">
+                <h3 class="card-title">Upcoming Lecture: "The Life of Prophet Muhammad (PBUH)"</h3>
+                <p style="margin-bottom: 15px;">Join us every Friday for an enlightening series on the Seerah of our beloved Prophet Muhammad (Peace Be Upon Him) and how to implement his teachings in our daily lives.</p>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 30px;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <h4 style="font-family: 'Amiri', serif; color: var(--primary-color); margin-bottom: 10px;">Lecture Details:</h4>
+                        <p><i class="far fa-calendar-alt" style="color: var(--gold-color); margin-left: 5px;"></i> Every Friday</p>
+                        <p><i class="far fa-clock" style="color: var(--gold-color); margin-left: 5px;"></i> After Jumu'ah Prayer</p>
+                        <p><i class="fas fa-map-marker-alt" style="color: var(--gold-color); margin-left: 5px;"></i> Main Masjid & Online</p>
+                    </div>
+                    
+                    <div style="flex: 1; min-width: 250px;">
+                        <h4 style="font-family: 'Amiri', serif; color: var(--primary-color); margin-bottom: 10px;">Previous Lectures:</h4>
+                        <p>Watch our previous lectures on YouTube covering various Islamic topics including:</p>
+                        <ul style="margin-top: 10px; padding-right: 20px;">
+                            <li>Tafsir of Quran</li>
+                            <li>Fiqh of Worship</li>
+                            <li>Islamic History</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="#" class="btn" style="margin: 0 10px;"><i class="fab fa-youtube"></i> YouTube Channel</a>
+                    <a href="#" class="btn" style="margin: 0 10px;"><i class="fas fa-download"></i> Download Lectures</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Islamic Reminders</h2>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <h3 class="feature-title">Hadith</h3>
+                    <p>"The best among you are those who learn the Quran and teach it." (Bukhari 5027)</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-quran"></i>
+                    </div>
+                    <h3 class="feature-title">Quran</h3>
+                    <p>"Allah is with those who are patient." (Quran 2:153)</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="feature-title">Knowledge</h3>
+                    <p>"Seek knowledge from the cradle to the grave." (Prophet Muhammad ﷺ)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#quran">Quran Tafsir</a></li>
+                        <li><a href="#hadith">Daily Hadith</a></li>
+                        <li><a href="#prayer">Prayer Times</a></li>
+                        <li><a href="#kids">Kids Quran</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> KAMPALA, UGANDA</li>
+                        <li><i class="fas fa-envelope"></i> info@muawiyahislamic.com</li>
+                        <li><i class="fas fa-phone"></i> +254 705 891 428</li>
+                    </ul>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support Us</h3>
+                    <p>Help us spread authentic Islamic knowledge by donating to our Quran teaching programs and mosque projects.</p>
+                    <a href="#" class="btn" style="margin-top: 15px; display: inline-block;">Donate Now</a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Muawiyah Islamic Lectures & Quranic Teaching. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="https://wa.me/254705891428" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
